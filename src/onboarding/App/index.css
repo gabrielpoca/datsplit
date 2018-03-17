@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 500px;
+  text-align: center;
+}
+
+.body {
+  border-radius: 10px;
+  padding: var(--size-large);
+  background: var(--color-white);
+  box-shadow: 0px 20px 55px #000000;
+}
+
+.logo {
+  margin-bottom: var(--size-xxlarge);
+}
+
+.label {
+  margin-bottom: var(--size-xxlarge);
+}

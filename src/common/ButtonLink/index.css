@@ -1,0 +1,31 @@
+.root {
+  border: 0;
+  cursor: pointer;
+  z-index: 1;
+  text-decoration: none;
+  display: block;
+  background: transparent;
+}
+
+.root:hover {
+  background: transparent;
+}
+
+.root:disabled,
+.root[aria-disabled="true"] {
+}
+
+.content {
+  align-items: center;
+  background: transparent;
+  border-bottom: 2px solid var(--color-black);
+  color: var(--color-black);
+  display: flex;
+  font-family: var(--font-family-heading);
+  font-size: var(--size-normal);
+  justify-content: center;
+  line-height: var(--size-large);
+  padding: 6px 6px;
+  transition: all .1s ease-out;
+  z-index: 1;
+}

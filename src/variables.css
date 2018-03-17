@@ -1,0 +1,16 @@
+:root {
+  --color-black: #171717;
+  --color-gray: #DBDBDB;
+  --color-gray-dark: #808080;
+  --color-white: #FFFFFF;
+  --color-background: linear-gradient(180deg, #303030 1.51%, #262626 95.51%);
+  --size-xxsmall: 8px;
+  --size-xsmall: 12px;
+  --size-small: 16px;
+  --size-normal: 20px;
+  --size-large: 24px;
+  --size-xlarge: 32px;
+  --size-xxlarge: 40px;
+  --font-family-regular: 'Lato', sans-serif;
+  --font-family-heading: 'Oswald', sans-serif;
+}

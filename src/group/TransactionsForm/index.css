@@ -1,0 +1,9 @@
+.root {
+  padding: var(--size-xxlarge);
+  display: flex;
+  flex: 1;
+}
+
+.title {
+  margin-bottom: var(--size-large);
+}

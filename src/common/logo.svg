@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1" viewBox="0 0 195 145">
+  <use fill="#FFFFFF" transform="translate(0 22)" xlink:href="#path0_fill"/>
+  <use fill="#FFFFFF" transform="translate(53)" xlink:href="#path1_fill"/>
+  <defs>
+    <path id="path0_fill" d="M71 123l72-42L0 0v81l71 42z"/>
+    <path id="path1_fill" d="M143 40L71 0 0 40l143 82V40z"/>
+  </defs>
+</svg>

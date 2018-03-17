@@ -1,0 +1,49 @@
+.root {
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  background: transparent;
+}
+
+.root:hover {
+  background: transparent;
+}
+
+.root:hover .content {
+}
+
+.root:disabled,
+.root[aria-disabled="true"] {
+}
+
+.content {
+  align-items: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  font-family: var(--font-family-heading);
+  font-size: var(--size-normal);
+  line-height: var(--size-large);
+  justify-content: center;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .2s ease-out;
+  z-index: 1;
+  border: 2px solid var(--color-black);
+}
+
+.root.alternative .content {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.root.alternative:hover .content {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.full {
+  width: 100%;
+}

@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+select {
+  -webkit-border-radius: 0px;
+  -webkit-appearance: none;
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  padding: 0;
+  color: rgb(30, 33, 34);
+  font-size: var(--size-small);
+  line-height: var(--size-normal);
+  display: inline;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button {
+  font-size: var(--size-normal);
+  border: 0;
+  background: var(--color-black);
+  color: white;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+button:hover {
+  background: var(--color-black);
+}
+
+select {
+  font-size: 18px;
+  background: transparent;
+}

@@ -1,0 +1,11 @@
+.root {
+  border-radius: 0 !important;
+  font-size: 18px;
+  height: var(--size-xlarge);
+  font-size: var(--size-small);
+  line-height: var(--size-normal);
+  border: 0;
+  border-bottom: 2px solid var(--color-black);
+  background: transparent;
+  width: 100%;
+}

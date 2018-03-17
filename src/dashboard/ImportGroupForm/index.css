@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  flex-grow: 1;
+  padding: 0 var(--size-xxlarge);
+}
+
+.body {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 500px;
+}

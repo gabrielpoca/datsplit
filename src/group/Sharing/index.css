@@ -1,0 +1,24 @@
+.root {
+  padding: 0 var(--size-xxlarge);
+  display: flex;
+  flex: 1;
+}
+
+.p {
+  margin-bottom: var(--size-large);
+}
+
+.input {
+  max-width: 500px;
+}
+
+.content {
+  flex-basis: 500px;
+  flex-direction: column;
+  display: flex;
+}
+
+.name {
+  font-weight: bold;
+  display: inline;
+}

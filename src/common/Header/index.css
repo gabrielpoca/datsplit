@@ -1,0 +1,24 @@
+.root {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px var(--size-large) 0;
+}
+
+.content {
+  flex: 1;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--font-family-heading);
+  font-size: var(--size-normal);
+  line-height: var(--size-large);
+  text-transform: capitalize;
+  text-transform: uppercase;
+}

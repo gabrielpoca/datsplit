@@ -1,0 +1,13 @@
+{
+  "presets": ["env", "react"],
+  "plugins": [
+    ["transform-object-rest-spread", { "useBuiltIns": true }],
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[path]__[name]__[local]__[hash:base64:5]",
+        "handleMissingStyleName": "warn"
+      }
+    ]
+  ]
+}

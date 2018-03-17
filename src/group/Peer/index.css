@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title {
+  padding: 0 var(--size-xxlarge);
+  margin-bottom: var(--size-xxlarge);
+}
+
+.transactions {
+  flex: 1;
+  list-style: none;
+  overflow: scroll;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--size-xxlarge);
+}
+
+.item:not(:last-child) {
+  margin-bottom: var(--size-xxlarge);
+}
