@@ -1,9 +1,67 @@
 .root {
-  padding: var(--size-xxlarge);
+  padding: 0 var(--size-xxlarge);
   display: flex;
   flex: 1;
+  overflow: scroll;
 }
 
 .title {
   margin-bottom: var(--size-large);
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  width: 300px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  border: 1px solid var(--color-black);
+  padding: var(--size-xsmall);
+  align-items: center;
+  cursor: pointer;
+  transition: all .1s ease-out;
+  margin-bottom: var(--size-normal);
+}
+
+.checkbox:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.checkboxLabel {
+  display: flex;
+  margin-left: var(--size-normal);
+}
+
+.checkboxInput {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.checkboxIcon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-black);
+}
+
+.checkboxInput:focus + .checkboxIcon {
+  border: 2px solid var(--color-black);
+}
+
+.checkbox:hover .checkboxIcon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-white);
+  transition: all .1s ease-out;
+}
+
+.checkboxInput:checked + .checkboxIcon {
+  background: var(--color-gray-dark);
 }

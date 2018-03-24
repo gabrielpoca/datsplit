@@ -1,7 +1,7 @@
 import React from 'react';
+import { isNumber, chain } from 'lodash';
 import { Link } from 'react-router-dom';
-import { Form } from 'react-form';
-import { isNumber, extend } from 'lodash';
+import { Form, Checkbox } from 'react-form';
 import Big from 'big.js';
 
 import {
@@ -16,6 +16,7 @@ import FormSelect from '../../common/FormSelect';
 import Button from '../../common/Button';
 import ButtonLink from '../../common/ButtonLink';
 import Heading from '../../common/Heading';
+import Body from '../../common/Body';
 
 import './index.css';
 
@@ -46,15 +47,30 @@ class TransactionsForm extends React.PureComponent {
   }
 
   handleSubmit(values) {
+    const { amount, description, from, to } = values;
     const { id } = this.props.match.params;
 
-    this.props.onAddTransaction(
-      extend(values, {
-        amount: Big(values.amount)
-          .round(2)
-          .toString()
-      })
-    );
+    const toAddresses = chain(to)
+      .pickBy(value => value)
+      .keys()
+      .value();
+    const eachAmount = Big(amount)
+      .div(toAddresses.length)
+      .round(2)
+      .toString();
+
+    toAddresses.forEach(toAddr => {
+      if (toAddr === from) return;
+
+      const params = {
+        from,
+        description,
+        amount: eachAmount,
+        to: toAddr
+      };
+
+      this.props.onAddTransaction(params);
+    });
 
     this.props.history.push(`/group/${id}`);
   }
@@ -103,15 +119,32 @@ class TransactionsForm extends React.PureComponent {
                 </Error>
               </Fieldset>
               <Fieldset>
-                <Label htmlFor="from">Lent by</Label>
+                <Label htmlFor="from">Paid by</Label>
                 <FormSelect id="from" field="from" options={this.peers()} />
                 <Error>
                   {touched.from && errors && errors.from ? errors.from : null}
                 </Error>
               </Fieldset>
               <Fieldset>
-                <Label htmlFor="to">To</Label>
-                <FormSelect id="to" field="to" options={this.peers()} />
+                <Label htmlFor="to">Split By</Label>
+                <div styleName="checkboxGroup">
+                  {this.peers().map(peer => (
+                    <label key={peer.value} styleName="checkbox">
+                      <Checkbox
+                        styleName="checkboxInput"
+                        id={`peer_${peer.value}`}
+                        field={['to', peer.value]}
+                      />
+                      <div styleName="checkboxIcon" />
+                      <div
+                        styleName="checkboxLabel"
+                        htmlFor={`peer_${peer.value}`}
+                      >
+                        {peer.label}
+                      </div>
+                    </label>
+                  ))}
+                </div>
                 <Error>
                   {touched.to && errors && errors.to ? errors.to : null}
                 </Error>
@@ -120,13 +153,15 @@ class TransactionsForm extends React.PureComponent {
                 <Button>
                   <button type="submit">Add</button>
                 </Button>
-                <ButtonLink>
-                  <Link to={this.props.match.url}>Cancel</Link>
-                </ButtonLink>
               </Actions>
             </MyForm>
           )}
         </Form>
+        <Body.Actions>
+          <ButtonLink>
+            <Link to={this.props.match.url}>Cancel</Link>
+          </ButtonLink>
+        </Body.Actions>
       </div>
     );
   }

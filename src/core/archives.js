@@ -23,7 +23,7 @@ class Archive {
         if (err.name === 'NotFoundError') {
           console.log(`/data.json not found for ${this.dat.url}`);
         } else {
-          console.error('Something went wrong', this.dat);
+          console.log('Something went wrong reading events', this.dat);
         }
 
         return [];
@@ -43,8 +43,7 @@ class Archive {
   }
 
   onChange(cb) {
-    const evts = this.dat.createFileActivityStream('/data.json');
-    evts.addEventListener('changed', () => cb(this));
+    setInterval(() => cb(this), 60000);
   }
 }
 

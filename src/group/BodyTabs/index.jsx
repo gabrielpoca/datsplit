@@ -9,7 +9,7 @@ class BodyTabs extends React.PureComponent {
     return [
       {
         href: url,
-        name: 'Transactions',
+        name: 'Expenses',
         active: this.props.active === 'transactions'
       },
       {

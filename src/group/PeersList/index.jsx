@@ -20,7 +20,7 @@ class PeersList extends React.Component {
     return (
       <span>
         <span styleName="balanceLabel">
-          {balance.gt(0) ? 'receives' : 'gets back'}
+          {balance.gt(0) ? 'gets back' : 'owns'}
         </span>{' '}
         &euro; {balance.abs().toString()}
       </span>

@@ -17,7 +17,7 @@ class TransactionsList extends React.Component {
         <Body.Actions>
           <Button>
             <Link to={`${this.props.match.url}/transactions/new`}>
-              Add Transaction
+              Add Expense
             </Link>
           </Button>
         </Body.Actions>

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel watch --no-hmr --no-cache -d public --public-url / src/index.html",
+    "start": "rm -rf public && parcel watch --no-hmr --no-cache -d public --public-url / src/index.html",
     "build": "rm -rf public && parcel build -d public --public-url / src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
