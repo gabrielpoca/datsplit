@@ -2,8 +2,21 @@
   padding: 0 var(--size-xxlarge);
   flex: 1;
   display: flex;
+  overflow-y: scroll;
 }
 
 .title {
   margin-bottom: var(--size-large);
+}
+
+.p {
+  margin-bottom: var(--size-large);
+}
+
+.p a {
+  font-size: inherit;
+}
+
+.url {
+  margin-bottom: var(--size-xxlarge);
 }

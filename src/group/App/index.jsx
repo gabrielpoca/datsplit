@@ -5,7 +5,6 @@ import { withRouter } from 'react-router';
 import Peers from '../Peers';
 import Transactions from '../Transactions';
 import BodyTabs from '../BodyTabs';
-import Sharing from '../Sharing';
 import Header from '../../common/Header';
 import Body from '../../common/Body';
 import Layout from '../../common/Layout';
@@ -32,15 +31,6 @@ class App extends React.Component {
                   <Fragment>
                     <BodyTabs {...this.props} active="peers" />
                     <Peers {...this.props} {...props} />
-                  </Fragment>
-                )}
-              />
-              <Route
-                path={`${path}/sharing`}
-                render={props => (
-                  <Fragment>
-                    <BodyTabs {...this.props} active="sharing" />
-                    <Sharing {...this.props} {...props} />
                   </Fragment>
                 )}
               />

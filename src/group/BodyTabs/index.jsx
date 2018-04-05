@@ -15,14 +15,8 @@ class BodyTabs extends React.PureComponent {
       {
         id: 'peers',
         href: `${url}/peers`,
-        name: 'Group',
+        name: 'Members',
         active: this.props.active === 'peers'
-      },
-      {
-        id: 'sharing',
-        href: `${url}/sharing`,
-        name: 'Sharing',
-        active: this.props.active === 'sharing'
       }
     ];
   }

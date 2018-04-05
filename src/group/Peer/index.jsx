@@ -17,7 +17,7 @@ export default class Peer extends React.PureComponent {
     return (
       <div styleName="root">
         <div styleName="title">
-          <Heading kind="h2">{peer.name}</Heading>
+          <Heading kind="h2">{peer.name}'s Expenses</Heading>
         </div>
 
         <ul styleName="transactions">

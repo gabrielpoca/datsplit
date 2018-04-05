@@ -30,11 +30,11 @@
   line-height: var(--size-large);
   padding: var(--size-normal) var(--size-xxlarge);
   text-decoration: none;
-  transition: all .1s ease-in-out;
 }
 
 .item:hover {
-  background: var(--color-gray-dark);
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
 .name {

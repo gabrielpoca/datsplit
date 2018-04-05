@@ -14,6 +14,7 @@ import Button from '../../common/Button';
 import Body from '../../common/Body';
 import ButtonLink from '../../common/ButtonLink';
 import Heading from '../../common/Heading';
+import TextInput from '../../common/TextInput';
 
 import './index.css';
 
@@ -48,7 +49,35 @@ class PeersForm extends React.PureComponent {
           {({ submitForm, errors, touched }) => (
             <MyForm onSubmit={submitForm}>
               <div styleName="title">
-                <Heading kind="h2">New Peer</Heading>
+                <Heading kind="h2">New Member</Heading>
+              </div>
+              <p styleName="p">
+                To add someone to this group, they need to visit{' '}
+                <a
+                  href="dat://datsplit-gabrielpoca.hashbase.io"
+                  target="_blank"
+                >
+                  datsplit-gabrielpoca.hashbase.io
+                </a>{' '}
+                and create an empty group.
+              </p>
+              <p styleName="p">
+                Inside the empty group, they have to navigate to this page
+                you're reading. There's a text field bellow with a DAT url. You
+                must exchange the URL in there with one another.
+              </p>
+              <p styleName="p">
+                You should take their URL and use the form bellow to add them as
+                a member. They must do the same with your URL.
+              </p>
+              {this.props.myURL && (
+                <div styleName="url">
+                  <Label htmlFor="name">Share this URL</Label>
+                  <TextInput disabled value={this.props.myURL} type="text" />
+                </div>
+              )}
+              <div styleName="title">
+                <Heading kind="h3">Add a Member</Heading>
               </div>
               <Fieldset>
                 <Label htmlFor="name">Name</Label>

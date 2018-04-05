@@ -47,7 +47,7 @@ class PeersList extends React.Component {
       <div styleName="root">
         <Body.Actions>
           <ButtonLink>
-            <Link to={`${this.props.match.url}/peers/new`}>Add Peer</Link>
+            <Link to={`${this.props.match.url}/peers/new`}>Add Member</Link>
           </ButtonLink>
         </Body.Actions>
         <ul styleName="list">
