@@ -51,14 +51,10 @@ export default class Transaction extends React.PureComponent {
   }
 
   render() {
-    const { description, from, to, date, toApproveByMe } = this.props;
-
-    let className = 'root';
-
-    if (toApproveByMe) className += ' toApprove';
+    const { description, from, to, date } = this.props;
 
     return (
-      <div styleName={className}>
+      <div styleName="root">
         <div styleName="date">
           <time styleName="label" dateTime={date}>
             {this.date()}
