@@ -3,6 +3,7 @@ import EventEmitter from './eventEmitter';
 class Archive {
   constructor(url) {
     this.dat = new DatArchive(url);
+    this.url = url;
     // the first time it receives write events to write to disk
     this.firstWrite = true;
   }
@@ -12,7 +13,7 @@ class Archive {
   }
 
   readDat() {
-    return this.dat.readFile('/dat.json').then(res => JSON.parse(res));
+    return this.dat.getInfo();
   }
 
   readEvents() {
