@@ -74,7 +74,7 @@ class Aggregate {
           state.peers[url] = { name, url };
         }
 
-        if (event.url === url) {
+        if (event.url === this.myURL) {
           state.peers[url] = { name, url };
         }
 
