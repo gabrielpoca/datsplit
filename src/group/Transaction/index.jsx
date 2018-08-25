@@ -39,13 +39,8 @@ export default class Transaction extends React.PureComponent {
     }
 
     return (
-      <Button alternative>
-        <button
-          styleName="action"
-          onClick={() => this.props.onApproveTransaction(id)}
-        >
-          Approve
-        </button>
+      <Button alternative onClick={() => this.props.onApproveTransaction(id)}>
+        <button styleName="action">Approve</button>
       </Button>
     );
   }
